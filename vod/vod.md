@@ -1,10 +1,10 @@
 ---
-description: 이 솔루션은 다음과 같은 기능을 제공합니다.
+description: 이 워크샵은 다음과 같은 기능을 제공합니다.
 ---
 
 # Video-On-Demand Streaming with AWS Elemental Media Services
 
-본 모듈에서는 원본 비디오를 Apple HTTP Live Streaming\(HLS\) Adaptive Bitrate Format\(ABR\)으로 트랜스코딩하고, 이를 웹을 통해 서비스하는 AWS Elemental MediaConvert Job을 만들어 봅니다. 기본 Lab 수행에 최대 20분 가량 소요되며, 추가 과제 수행에 최대 15분 가량 소요됩니다.
+본 모듈에서는 원본 비디오를 **Apple HTTP Live Streaming\(HLS\) Adaptive Bitrate Format\(ABR\)**으로 트랜스코딩하고, 이를 웹을 통해 서비스하는 AWS Elemental MediaConvert Job을 만들어 봅니다. 기본 Lab 수행에 최대 20분 가량 소요되며, 추가 과제 수행에 최대 15분 가량 소요됩니다.
 
 ![](../.gitbook/assets/0%20%283%29.png)
 
