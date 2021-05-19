@@ -1,5 +1,5 @@
 ---
-description: 이 솔루션은 다음과 같은 기능을 제공합니다.
+description: 이 워크샵은 다음과 같은 기능을 제공합니다.
 ---
 
 # Live Streaming with AWS Elemental MediaServices
