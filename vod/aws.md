@@ -1,5 +1,5 @@
 ---
-description: 이 솔루션은 다음과 같은 기능을 제공합니다.
+description: 'Last Updated : 2021-5-20'
 ---
 
 # AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront로 배포하기

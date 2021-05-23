@@ -1,5 +1,5 @@
 ---
-description: 이 솔루션은 다음과 같은 기능을 제공합니다.
+description: 'Last Updated : 2021-5-20'
 ---
 
 # Monetization with AWS Elemental MediaServices
