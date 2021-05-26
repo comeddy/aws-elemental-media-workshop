@@ -18,7 +18,7 @@
 * [\[Demo\] Live Streaming with AWS Elemental MediaService](https://www.youtube.com/watch?v=YLibzVpQgo0)
 * [\[Demo\] AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront로 배포하기](https://youtu.be/ZO2c47KF4KE)
 * [\[Demo\] Monetization with AWS Elemental MediaServices](https://youtu.be/yOiLKIZOYjE)
-* [\[Demo\] 1장 - AWS 머신 러닝 및 미디어 서비스들을 이용하여 영상에서 유명 인사 인식하기](https://samsungdocs.awsapps.com/workdocs/index.html#/share/document/925660dd53d8524e92551bd8c57ce14332bea326382c0bc4f75266064a729bf2)
+* [\[Demo\] 1장 - AWS 머신 러닝 및 미디어 서비스들을 이용하여 영상에서 유명 인사 인식하기](https://youtu.be/IrGVh9aPMTw)
 * [\[Demo\] 2장 - AWS 머신 러닝 및 미디어 서비스들을 이용하여 영상의 사물 인식하기](https://youtu.be/34jPHqlOUHY)
 * [\[Demo\] 3장 - AWS 머신 러닝 및 미디어 서비스들을 이용하여 영상속 음성을 받아쓰기](https://youtu.be/R9jQ2weHPf0)
 * [\[En-lab\] Live Streaming with Amazon Interactive Video Service](https://ivs-streaming.workshop.aws/en/)
