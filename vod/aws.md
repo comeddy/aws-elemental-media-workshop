@@ -14,6 +14,8 @@ description: 'Last Updated : 2021-5-20'
 
 **Amazon CloudFront**는 MediaPackage 사용자 지정 엔드포인트를 오리진으로 사용하도록 구성되어 있으며 요청 인증을 위해 CDN 식별자 사용자 지정 HTTP 헤더를 포함합니다. CloudFront 배포판은 짧은 지연 시간과 빠른 전송 속도로 시청자에게 라이브 스트림을 전달합니다.
 
+**AWS Amplify**의 개발 도구 및 기능 외에도, AWS Amplify는 AWS 콘솔에서 직접 액세스할 수 있는 완전관리형 정적 웹 호스팅 서비스를 제공합니다. AWS Amplify의 정적 웹 호스팅 서비스는 단일 페이지 웹 앱 또는 서버리스 백엔드가 포함된 정적 사이트를 빌드, 배포 및 호스팅하기 위한 완벽한 워크플로를 제공합니다.
+
 ## \*\*\*\*
 
 ### **1. AWS Elemental MediaPackage Channel 생성**
@@ -169,11 +171,72 @@ description: 'Last Updated : 2021-5-20'
 
    4. CloudFront 를 통해 배포되는 라이브 영상 확인이 완료되었습니다.
 
-![](../.gitbook/assets/screen-shot-2021-05-16-at-7.21.45-pm.png)
+### 5. Host web app을 Amplify 통해 배포하기 
+
+최신 웹 앱을 호스팅하는 경우 웹 서버가 필요하지 않으며, 콘텐츠 전송 네트워크를 사용하여 정적 콘텐츠\(HTML, CSS 및 JavaScript 파일\)를 저장합니다. AWS Amplify는 [Amazon CloudFront 글로벌 엣지 네트워크](https://aws.amazon.com/ko/cloudfront/features/)를 사용하여 웹 앱을 전 세계에 배포합니다. 
+
+1. HTML 파일로 저장
+
+* &lt;CloudFront URL&gt;을 입력한 후,  index.html로 저장합니다.
+* 영상 재생을 웹브라우저를 통해 확인한 후, ZIP 파일로 압축합니다.\(예, index.zip\)   
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Builders Workshop</title>
+  
+
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+   
+</head>
+<body>
+  <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
+  data-setup='{}'>
+    <source src="<CloudFront URL>" type="application/x-mpegURL">
+  </video>
+  
+<script>
+var player = videojs('my_video_1');
+player.play();
+</script>
+  
+</body>
+</html>
+```
+
+    2. Amplify 서비스로 이동한 후 New app, Host web app 을 클릭합니다.
+
+* Deploy without Git Provider 을 선택하고, Continue 클릭합니다.
+
+{% hint style="success" %}
+Amplify 는 정적 웹 호스팅시 GitHub, BitBucket, GitLab 및 AWS CodeCommit의 프라이빗 및 퍼블릭 리포지토리에 연결할 수 있습니다. 여기서는 Git Provider 없이 정적웹 호스팅을 이용해봅니다.
+{% endhint %}
+
+![](../.gitbook/assets/screen-shot-2021-09-12-at-8.27.09-pm.png)
+
+3. App Name과 Environment name에 적당한 이름으로 작성합니다.
+
+* **Drag and drop** 을 클릭하고 zip파일을 업로드 한 후,  **Save and deploy**를 합니다.
+
+![](../.gitbook/assets/screen-shot-2021-09-12-at-8.33.25-pm.png)
+
+
+
+4. Amplify를 통해 배포된 도메인을 통해 라이브 영상을 최종합니다.
+
+![](../.gitbook/assets/screen-shot-2021-09-12-at-8.36.07-pm.png)
+
+5. 영상재생 버튼 클릭후 우측하단의 **Picture-in-picture\(PiP\)** 기능으로 영상재생을 확인합니다.  
+
+![](../.gitbook/assets/image%20%28120%29.png)
 
 ### **완료**
 
 축하합니다! AWS Elemental MediaLive Service를 이용한 HoL을 완료하셨습니다.
 
-
+AWS Amplify 정적 웹 호스팅에서는 빌드/배포 및 웹 호스팅이라는 2가지 기능에 대한 요금을 책정합니다. 빌드 및 배포 기능의 경우 빌드 분당 요금은 0.01 USD입니다. 호스팅 기능의 경우, 제공된 GB당 요금은 0.15 USD이고 저장된 GB당 요금은 0.023 USD입니다. AWS 프리 티어를 사용하는 고객은 무료로 시작할 수 있습니다.
 
