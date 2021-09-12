@@ -181,7 +181,7 @@ description: 'Last Updated : 2021-9-12'
 
 1. HTML 파일로 저장
 
-* &lt;CloudFront URL&gt;을 입력한 후,  index.html로 저장합니다.
+* 아래 소스를 편집에디터를 이용해 &lt;CloudFront URL&gt;을 삽입한 후,  index.html로 저장합니다.
 * 영상 재생을 웹브라우저를 통해 확인한 후, ZIP 파일로 압축합니다.\(예, index.zip\)   
 
 ```markup
