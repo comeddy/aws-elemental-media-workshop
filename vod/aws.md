@@ -1,5 +1,5 @@
 ---
-description: 'Last Updated : 2021-5-20'
+description: 'Last Updated : 2021-9-12'
 ---
 
 # AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront로 배포하기
@@ -72,6 +72,10 @@ description: 'Last Updated : 2021-5-20'
 ![Input Security Group &#xD654;&#xBA74;](../.gitbook/assets/image%20%2863%29.png)
 
 * **Input destinations**로 이동합니다.  Destination A의 application name으로 ‘builders’를 입력하고 ‘a’를 instance name으로 입력합니다. Destination B의 application name으로 ‘builders’를 입력하고 ‘b’를 instance name으로 입력합니다.
+
+{% hint style="info" %}
+표준 채널의 경우 STANDARD\_INPUT을 선택해야 합니다. 단일 파이프라인 채널의 경우 SINGLE\_INPUT 또는 STANDARD\_INPUT을 선택할 수 있습니다.
+{% endhint %}
 
 ![MediaLive &#xC785;&#xB825;&#xB300;&#xC0C1; A/B &#xC124;&#xC815;](../.gitbook/assets/screen-shot-2021-05-16-at-6.59.03-pm.png)
 
