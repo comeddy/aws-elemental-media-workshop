@@ -240,7 +240,7 @@ Amplify 는 정적 웹 호스팅시 GitHub, BitBucket, GitLab 및 AWS CodeCommit
 
 ### **완료**
 
-축하합니다! AWS Elemental MediaLive Service를 이용한 HoL을 완료하셨습니다.
-
 AWS Amplify 정적 웹 호스팅에서는 빌드/배포 및 웹 호스팅이라는 2가지 기능에 대한 요금을 책정합니다. 빌드 및 배포 기능의 경우 빌드 분당 요금은 0.01 USD입니다. 호스팅 기능의 경우, 제공된 GB당 요금은 0.15 USD이고 저장된 GB당 요금은 0.023 USD입니다. AWS 프리 티어를 사용하는 고객은 무료로 시작할 수 있습니다.
+
+축하합니다! AWS Elemental MediaLive Service를 이용한 HoL을 완료하셨습니다.
 
