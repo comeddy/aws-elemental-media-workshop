@@ -33,5 +33,7 @@ description: 본 Immersion Day 핸즈온 실습을 위해 다음과 같이 준�
 
 ![AWS Management Console &#xBA54;&#xC778;\(Seoul Region\)](.gitbook/assets/image%20%28111%29.png)
 
+MediaTailor 워크샵인 경우 서울리전에 GA 안되었으므로, 다른 리전 (예, 도쿄 리전)을 선택하여 실습을 진행합니다.
+
 ![AWS Management Console &#xBA54;&#xC778;\(Tokyo Region\)](.gitbook/assets/image%20%2846%29.png)
 
