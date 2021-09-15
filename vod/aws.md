@@ -147,7 +147,7 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 1. 스트리밍이 시작되면 MediaPackage의 Endpoints에서 Play를 눌러 영상을 확인할 수 있습니다.
 
-![](../.gitbook/assets/screen-shot-2021-05-16-at-7.14.47-pm%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2021-05-16-at-7.14.47-pm%20%281%29%20%281%29.png)
 
 1. PlayBack preview 에서 미리 보기확인과 QR code로 미리보기 할 수 있습니다.
 

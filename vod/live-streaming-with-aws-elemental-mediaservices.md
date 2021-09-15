@@ -33,7 +33,7 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 * **Add endpoints** 버튼을 클릭합니다.
 
-![](../.gitbook/assets/4.png)
+![](../.gitbook/assets/4%20%284%29.png)
 
 {% hint style="info" %}
 **Add endpoint** 채널의 단일 전송 지점을 정의합니다. 엔드포인트는 AWS Elemental MediaPackage가 플레이어나 CDN\(콘텐츠 배포 네트워크, 예: Amazon CloudFront\)과 통합하는 데 필요한 모든 정보를 포함합니다. 사용 가능한 스트림 형식 중 하나로 콘텐츠를 출력하도록 엔드포인트를 구성할 수 있습니다.
@@ -80,7 +80,7 @@ https://s3.amazonaws.com/mediaimmersion/medialive/vod/vanlife.m3u8
 
 * **Input Source B**의 URL에도 동일한 URL을 입력합니다. 이 실습에서는 추가 input에 동일한 Input Stream을 사용합니다.
 
-![/var/folders/qy/8sfk8h6x4dqcplg52d1pp8smzs35t9/T/com.microsoft.Word/Content.MSO/A079D87D.tmp](../.gitbook/assets/10.jpeg) AWS Elemental MediaLive에서 채널이 표준 채널로 설정된 경우 MediaLive는 업스트림 시스템이 두 개의 소스를 제공할 것으로 예상하므로 두 소스 위치에서 모두 가져오려고 시도하며, 채널이 단일 파이프라인 채널로 설정된 경우 MediaLive는 업스트림 시스템이 하나의 소스를 제공할 것으로 예상하므로 하나의 소스 위치에서 가져오려고 시도합니다.
+![/var/folders/qy/8sfk8h6x4dqcplg52d1pp8smzs35t9/T/com.microsoft.Word/Content.MSO/A079D87D.tmp](../.gitbook/assets/18%20%284%29.jpeg) AWS Elemental MediaLive에서 채널이 표준 채널로 설정된 경우 MediaLive는 업스트림 시스템이 두 개의 소스를 제공할 것으로 예상하므로 두 소스 위치에서 모두 가져오려고 시도하며, 채널이 단일 파이프라인 채널로 설정된 경우 MediaLive는 업스트림 시스템이 하나의 소스를 제공할 것으로 예상하므로 하나의 소스 위치에서 가져오려고 시도합니다.
 
 ![&#xC785;&#xB825;&#xC0DD;&#xC131;](../.gitbook/assets/image%20%2881%29.png)
 
@@ -125,7 +125,7 @@ MediaPackage input URL과 Credentials 정보는 위를 참고하시기 바랍니
 
 * **파라미티 생성**을 클릭하여 **HLS group destination A** 의 보안 크레덴셜을 생성합니다.
 
-![](../.gitbook/assets/image%20%2890%29.png)
+![](../.gitbook/assets/image%20%2841%29%20%281%29%20%282%29.png)
 {% endtab %}
 
 {% tab title="HLS 그룹 대상 B" %}
@@ -223,7 +223,7 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 
 * **Channel and input details**을 클릭하여 나머지 MediaLive channel 설정을 수행합니다.
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2849%29%20%282%29.png)
 
 * **Channel name**에 ‘imday-live’을 입력합니다. 
 * 아래 IAM role 란에는 앞서 만든 MediaLiveAccessRole이 보일 겁니다. Channel template 드롭다운 박스에서 ‘HTTP live streaming\(MediaPackage\)’을 선택합니다. 팝업 창이 나오면 Confirm을 눌러 넘어갑니다.
@@ -336,7 +336,7 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 3. Facebook 브라우저 탭으로 돌아가면 영상 재생이 시작되는 것을 확인할 수 있습니다. 그리고 우측 하단의 Go Live 버튼은 영상이 준비되면 활성화 됩니다
 4. **Go Live** 버튼을 클릭하면 Facebook 계정으로 스트리밍을 시작할 수 있습니다.
 
-![/var/folders/qy/8sfk8h6x4dqcplg52d1pp8smzs35t9/T/com.microsoft.Word/Content.MSO/A079D87D.tmp](../.gitbook/assets/54.jpeg)**Go Live** 버튼은 Facebook이 실시간 영상을 Facebook 페이지에서 방송할 수 있도록 합니다. Facebook Live user interface는 Facebook으로 라이브 방송이 성공적으로 전달되었다는 Preview영상을 보여줍니다.
+![/var/folders/qy/8sfk8h6x4dqcplg52d1pp8smzs35t9/T/com.microsoft.Word/Content.MSO/A079D87D.tmp](../.gitbook/assets/18%20%285%29.jpeg)**Go Live** 버튼은 Facebook이 실시간 영상을 Facebook 페이지에서 방송할 수 있도록 합니다. Facebook Live user interface는 Facebook으로 라이브 방송이 성공적으로 전달되었다는 Preview영상을 보여줍니다.
 
 ![](../.gitbook/assets/image%20%2899%29.png)
 
