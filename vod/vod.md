@@ -101,7 +101,7 @@ ARN? Amazon 리소스 이름\(ARN\)은 AWS 리소스를 고유하게 식별합�
 
 MediaConvert 작업은 소스 컨텐츠 비디오를 입력받아 다수의 출력들을 가질 수 있는 출력 그룹들로 비디오를 변환할 수 있습니다. 하나의 미디어 변환 작업은 입력된 비디오를 여러 코덱을 적용하고 패키징한 다양한 버전의 비디오를 만들 수 있습니다. 이 모듈에서는 단일 입력 비디오를 가져와 하나의 Apple HLS 출력 그룹으로 변환하는 MediaConvert 작업을 만들어 봅니다. 이를 통해 소스를 다양한 bitrate의 여러 chunk 파일들로 인코딩하는 Adaptive bitrate 스택의 예를 살펴볼 수 있습니다. 텍스트 기반의 manifest 파일들과, 각 인코딩 스트림의 미디어 chunk data 들은 HTTP 서버\(S3\)를 통해 서비스됩니다.
 
-![MediaConvert &#xB3D9;&#xC791;&#xC608;&#xC2DC;](../.gitbook/assets/image%20%28113%29.png)
+![MediaConvert &#xB3D9;&#xC791;&#xC608;&#xC2DC;](../.gitbook/assets/image%20%28113%29%20%281%29.png)
 
 1. 이 Lab을 진행하는 리전에서 MediaConvert 콘솔을 엽니다.
 2. 우측 **작업 생성** 칸 안의 **시작하기** 버튼을 누릅니다.

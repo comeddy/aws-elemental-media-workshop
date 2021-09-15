@@ -19,7 +19,7 @@ description: 이번 워크샵에서 핸즈온 실습을 위해 Event engine을 �
 
 * AWS console 을 클릭합니다.
 
-![ &#xC2E4;&#xC2B5;&#xC6A9; &#xD300; &#xB300;&#xC2DC;&#xBCF4;&#xB4DC; ](.gitbook/assets/image%20%28117%29.png)
+![ &#xC2E4;&#xC2B5;&#xC6A9; &#xD300; &#xB300;&#xC2DC;&#xBCF4;&#xB4DC; ](.gitbook/assets/image%20%28117%29%20%281%29.png)
 
 * Open AWS Consoles 를 클릭합니다.
 

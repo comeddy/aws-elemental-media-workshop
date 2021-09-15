@@ -33,7 +33,7 @@ description: 'Last Updated : 2021-5-20'
 
 * **Add endpoints** 버튼을 클릭합니다.
 
-![](../.gitbook/assets/4.png)
+![](../.gitbook/assets/4%20%284%29.png)
 
 {% hint style="info" %}
 **Add endpoint** 채널의 단일 전송 지점을 정의합니다. 엔드포인트는 AWS Elemental MediaPackage가 플레이어나 CDN\(콘텐츠 배포 네트워크, 예: Amazon CloudFront\)과 통합하는 데 필요한 모든 정보를 포함합니다. 사용 가능한 스트림 형식 중 하나로 콘텐츠를 출력하도록 엔드포인트를 구성할 수 있습니다.
@@ -125,7 +125,7 @@ MediaPackage input URL과 Credentials 정보는 위를 참고하시기 바랍니
 
 * **파라미티 생성**을 클릭하여 **HLS group destination A** 의 보안 크레덴셜을 생성합니다.
 
-![](../.gitbook/assets/image%20%2841%29%20%281%29.png)
+![](../.gitbook/assets/image%20%2841%29%20%281%29%20%281%29.png)
 {% endtab %}
 
 {% tab title="HLS 그룹 대상 B" %}
