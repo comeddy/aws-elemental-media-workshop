@@ -12,8 +12,6 @@
 
 ## Workshop Demo <a id="hand-on-lab-record"></a>
 
----
-
 * [Video-On-Demand Streaming with AWS Elemental Media Services\(Demo\)](https://samsungdocs.awsapps.com/workdocs/index.html#/share/document/3337262b8633f932ebbf18fc596a4537a458c88f4259748a1bc47390f04c6560)
 * [Live Streaming with AWS Elemental MediaServices\(Demo\)](https://samsungdocs.awsapps.com/workdocs/index.html#/share/document/95a6bdda4e6685c2dc1c9fdda69b0e7d3befa59d883e3b6d8ef6d2dad6eccd02)
 * [AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront로 배포하기\(Demo\)](https://samsungdocs.awsapps.com/workdocs/index.html#/share/document/5cc79304500e78c0fb452de0ead7a2eeb4bee0634e1a79b7460abc19a26ed38a)

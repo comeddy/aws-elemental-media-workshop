@@ -21,8 +21,8 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 ![](../.gitbook/assets/1%20%283%29.png)
 
-1. **Video content source**에 다음 주소를 입력합니다. “https://s3.amazonaws.com/mediaimmersion/mediatailor/vod/”
-2. **Ad Decision Server에 다음 주소를 입력합니다.** “https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id\_vmap.xml”
+1. **Video content source**에 다음 주소를 입력합니다. “[https://s3.amazonaws.com/mediaimmersion/mediatailor/vod/”](https://s3.amazonaws.com/mediaimmersion/mediatailor/vod/”)
+2. **Ad Decision Server에 다음 주소를 입력합니다.** “[https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id\_vmap.xml”](https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id_vmap.xml”)
 
 ![](../.gitbook/assets/2%20%282%29.png)
 
@@ -57,8 +57,8 @@ https://85c4d9e190c642b8a55cde0fb024b5bd.mediatailor.us-west-2.amazonaws.com/v1/
 
 1. MediaTailor service에서, **Create Configuration**을 클릭합니다.
 2. **Configuration name**에 “ImmersionDayLive”를 입력합니다.
-3. **Video content** source input에 아래 주소를 입력합니다. “https://s3.amazonaws.com/mediaimmersion/mediatailor/live/”
-4. **Ad Decision Server**에 아래 주소를 입력합니다. “https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id\_vast.xml”
+3. **Video content** source input에 아래 주소를 입력합니다. “[https://s3.amazonaws.com/mediaimmersion/mediatailor/live/”](https://s3.amazonaws.com/mediaimmersion/mediatailor/live/”)
+4. **Ad Decision Server**에 아래 주소를 입력합니다. “[https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id\_vast.xml”](https://s3.amazonaws.com/mediaimmersion/mediatailor/content/id_vast.xml”)
 5. 마지막으로**Create configuration**을 클릭합니다.
 6. MediaTailor 대쉬보드로 돌아갑니다.
    1. 화면의 테이블에서 새로 생성한 설정과 그 옆의 **Playback endpoint**를 확인할 수 있습니다 \(Propagation에 수 분 정도 소요될 수 있습니다\).
@@ -66,9 +66,9 @@ https://85c4d9e190c642b8a55cde0fb024b5bd.mediatailor.us-west-2.amazonaws.com/v1/
 8. 페이지 하단을 내려간 후**HLS Playback Prefix**를 복사합니다.
 9. 컨텐트를 재생하려면, playback URL을 붙여넣기한 후 “vanlife.m3u8”을 추가하여Safari 브라우저나[JW Player Stream Tester](https://developer.jwplayer.com/tools/stream-tester/)에 입력합니다.
 
-방금 만든 링크는 아래 링크와 유사할 것입니다. 
+방금 만든 링크는 아래 링크와 유사할 것입니다.
 
-> _https://2a10d1a1a4174f349b9887cddd844ddf.mediatailor.us-west-2.amazonaws.com/v1/master/427049e32d97a07c182e16e273df0bfbc6b09413/ImmersionDayLive/vanlife.m3u8_
+> [https://2a10d1a1a4174f349b9887cddd844ddf.mediatailor.us-west-2.amazonaws.com/v1/master/427049e32d97a07c182e16e273df0bfbc6b09413/ImmersionDayLive/vanlife.m3u8](https://2a10d1a1a4174f349b9887cddd844ddf.mediatailor.us-west-2.amazonaws.com/v1/master/427049e32d97a07c182e16e273df0bfbc6b09413/ImmersionDayLive/vanlife.m3u8)
 
 * 최초로 영상을 재생하였을 때에는 “On-the-Fly” 트랜스코딩 작업으로 인해 광고가 나오지 않을 수도 있습니다. 일단 광고가 트랜스코딩 되고 캐쉬에 저장되면, 방송 전, 방송 중, 그리고 방송 후에 광고가 추가된 영상을 확인하실 수 있습니다.
 

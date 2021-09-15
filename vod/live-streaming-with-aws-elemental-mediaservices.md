@@ -4,17 +4,17 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 # Live Streaming with AWS Elemental MediaServices
 
- 이 실습에서는 **AWS Elemental MediaLive**와 **MediaPackage**를 사용하여 라이브 스트리밍 채널을 생성하는 것을 진행합니다. 그리고, 추가적으로 OBS를 이용하여 Facebook계정으로 라이브 채널을 구성하는 실습도 진행할 것입니다.
+이 실습에서는 **AWS Elemental MediaLive**와 **MediaPackage**를 사용하여 라이브 스트리밍 채널을 생성하는 것을 진행합니다. 그리고, 추가적으로 OBS를 이용하여 Facebook계정으로 라이브 채널을 구성하는 실습도 진행할 것입니다.
 
 ![](../.gitbook/assets/0.png)
 
- **AWS Elemental MediaLive**는 브로드캐스트 및 스트리밍 전송을 위한 라이브 출력을 생성할 수 있는 실시간 비디오 서비스로, 실시간 비디오 콘텐츠의 형식 및 패키지를 다른 형식 및 패키지로 변환할 수 있습니다.
+**AWS Elemental MediaLive**는 브로드캐스트 및 스트리밍 전송을 위한 라이브 출력을 생성할 수 있는 실시간 비디오 서비스로, 실시간 비디오 콘텐츠의 형식 및 패키지를 다른 형식 및 패키지로 변환할 수 있습니다.
 
- **AWS Elemental MediaPackage**는 AWS 클라우드에서 실행되는 JIT\(Just-In-Time\) 비디오 패키징 및 제작 서비스로, MediaPackage를 사용하면 매우 안전하고 확장 가능하며 신뢰할 수 있는 비디오 스트림을 다양한 재생 디바이스 및 CDN\(콘텐츠 전송 네트워크\)에 전달할 수 있습니다.
+**AWS Elemental MediaPackage**는 AWS 클라우드에서 실행되는 JIT\(Just-In-Time\) 비디오 패키징 및 제작 서비스로, MediaPackage를 사용하면 매우 안전하고 확장 가능하며 신뢰할 수 있는 비디오 스트림을 다양한 재생 디바이스 및 CDN\(콘텐츠 전송 네트워크\)에 전달할 수 있습니다.
 
 ## **1. S3소스를 사용한 라이브 스트리밍**
 
-### AWS Elemental MediaPackage Channel 생성 
+### AWS Elemental MediaPackage Channel 생성
 
 1. 이 실습에서는 MediaPackage를 Media Origin으로 사용합니다. 먼저, 미디어 패키지 채널을 준비합니다.
 2. AWS 콘솔에 로그인 한 후 리전을 선택하고, MediaPackage 서비스 콘솔 페이지로 이동합니다.
@@ -114,7 +114,7 @@ https://s3.amazonaws.com/mediaimmersion/medialive/vod/vanlife.m3u8
 * 왼쪽 메뉴 바의 **출력 그룹** 섹션에서 **TN2224\(HLS\)** 을 선택합니다.
 
 {% tabs %}
-{% tab title="HLS  그룹 대상 A" %}
+{% tab title="HLS  그룹 대상 A" %}
 * 첫번째 MediaPackage의 URL을 URL에 입력하고**Credentials** 옵션을 확장합니다. MediaPackage의 첫번째 입력의 사용자명\(username\*\*\*\)을 복사하여**Username**에 붙입니다. 그리고 **Create parameter**를 선택한 후 **Name**에 또 붙입니다. MediaPackage의 첫번째 입력의 password\*\*\*를 복사한 후**Password value**에 붙입니다.
 
 {% hint style="info" %}
@@ -139,7 +139,7 @@ MediaPackage input URL과 Credentials 정보는 위를 참고하시기 바랍니
 ![HLS &#xCD9C;&#xB825;&#xD654;&#xBA74;](../.gitbook/assets/image%20%2840%29.png)
 
 {% hint style="warning" %}
-MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하십시오. Input에 캡션이 없는 경우 채널을 만드는 동안 오류를 방지합니다. 
+MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하십시오. Input에 캡션이 없는 경우 채널을 만드는 동안 오류를 방지합니다.
 {% endhint %}
 
 ![&#xCD9C;&#xB825;&#xADF8;&#xB8F9;&#xD654;&#xBA74;](../.gitbook/assets/image%20%28107%29.png)
@@ -189,7 +189,7 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 
 * MediaPackage 채널의 생성이 완료 되었습니다. MediaLive 채널을 생성하는 다음 섹션으로 이동합니다.
 
-###  AWS MediaLive Channel 생
+### AWS MediaLive Channel 생
 
 1. **AWS Elemental MediaLive Channel 생성하기**
    1. MediaLive 서비스 콘솔 페이지로 이동합니다.
@@ -286,7 +286,7 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 
 * 스트리밍이 시작되면 MediaPackage의 Endpoints에서 Play를 눌러 영상을 확인할 수 있습니다.
 
-## **3. Facebook에 라이브 스트리밍** 
+## **3. Facebook에 라이브 스트리밍**
 
 다음 섹션은 Facebook계정이 필요합니다. 이번 과정은 Facebook live로 스트림을 전송하는 실습입니다. Facebook live video의 기본 세팅은 본인만 볼 수 있는 것입니다. 그리고 라이브 이벤트가 종료된 후 영상을 삭제할 수 있습니다.
 
@@ -297,7 +297,7 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-6.27.03-pm.png)
 
-     3. Update channel class to **SINGLE\_PIPELINE** 으로 업데이트 합니다.    
+1. Update channel class to **SINGLE\_PIPELINE** 으로 업데이트 합니다.    
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-6.38.41-pm.png)
 
@@ -305,9 +305,9 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 **알고계신가요?** 입력대상 주소를 A와B 이중화가 아닌 단일 파이프라인으로 설정하고 싶을 경우, Channel class를 SINGLE\_PIPELINE으로 선택합니다.
 {% endhint %}
 
-    4. 좌측 navigation pane에서 Output groups\(출력 그룹\) 옆에 있는 **Add\(추가\)** 버튼을 클릭합니다.
+1. 좌측 navigation pane에서 Output groups\(출력 그룹\) 옆에 있는 **Add\(추가\)** 버튼을 클릭합니다.
 
-    ****5. **RTMP**를 선택하고 **Confirm** 버튼을 클릭합니다.
+   **\*\*5.** RTMP**를 선택하고** Confirm\*\* 버튼을 클릭합니다.
 
 ![](../.gitbook/assets/image%20%2838%29.png)
 
@@ -325,9 +325,9 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-6.36.23-pm.png)
 
-   2. Scroll down to **Stream settings** 섹션으로 스크롤 다운 하여, **Video**를 선택하고 1920과 1080을 각각 **Width**와 **Height** 텍트스 박스에 입력합니다. 그리고 **Codec Settings** 드롭다운 박스에서 H264를 선택합니다.
+1. Scroll down to **Stream settings** 섹션으로 스크롤 다운 하여, **Video**를 선택하고 1920과 1080을 각각 **Width**와 **Height** 텍트스 박스에 입력합니다. 그리고 **Codec Settings** 드롭다운 박스에서 H264를 선택합니다.
 
-   ****3**. Rate Control**,항목을 확장하여 **Bitrate** 텍스트박스에 “4000000”을 입력합니다.
+   **\*\*3**. Rate Control**,항목을 확장하여** Bitrate\*\* 텍스트박스에 “4000000”을 입력합니다.
 
 ![](../.gitbook/assets/image%20%2837%29.png)
 
@@ -341,8 +341,6 @@ MediaPackage 출력에서 'X'를 클릭하여 WebVTT의 '출력 10'을 제거하
 ![](../.gitbook/assets/image%20%2899%29.png)
 
 ![](../.gitbook/assets/image%20%287%29.png)
-
-
 
 ### **완료**
 

@@ -49,7 +49,6 @@ IAM 역할은 사용자의 AWS 계정을 대신하여 AWS 서비스에게 AWS �
 만약 이전에 AWS Elemental MediaConvert를 사용해 보신 적이 없다면, MediaConvert가 S3 버킷에 읽고 쓰기 위한 역할을 생성해야 합니다.
 
 1. MediaConvert 역할을 생성합니다.
-
    1. **역할 만들기**를 클릭합니다.
    2. 서비스 목록에서 **MediaConvert**를 선택합니다.
    3. **다음: 권한**을 클릭합니다.
@@ -58,10 +57,10 @@ IAM 역할은 사용자의 AWS 계정을 대신하여 AWS 서비스에게 AWS �
    6. 새로 만든 역할에 이름을 정해줍니다. 여기서는 “vod-MediaConvertRole”로 지어 보겠습니다.
    7. **역할 생성**을 누릅니다.
 
-#### Create A S3 Bucket
+### Create A S3 Bucket
 
 1. 화면 상단의 **서비스**를 클릭한 후, 저장소 카테고리 아래의 **Amazon S3**를 선택합니다. 
-2. **+버킷 만들기**를 클릭합니다. ****
+2. **+버킷 만들기**를 클릭합니다. _\*\*_
 3. 버킷 이름은 유일해야 하므로, 다음과 같은 형태로 이름을 지어 보겠습니다: “**&lt;이름&gt;**-immersionday”. 예를 들어 이름이 John Smith라면, 다음과 같이 지을 수 있겠습니다: “smith-immersionday”. 그리고 드롭 다운 메뉴에서 이 랩을 수행하고 있는 리젼을 선택해 주세요.
 
 {% hint style="info" %}
@@ -70,14 +69,14 @@ Amazon S3 버킷 이름은 글로벌하게 유일해야 합니다. 만약 당신
 
 오른쪽 아래의 **버킷 만들기**를 누릅니다.
 
-#### Create A DynamoDB Table
+### Create A DynamoDB Table
 
 1. 화면 상단의 **서비스** 버튼을 누르고 데이터베이스 카테고리의 **DynamoDB**를 선택합니다. 
 2. **테이블 만들기**를 클릭합니다. 그리고 테이블 이름을 “rekognition-thumbs”로 입력합니다. 이후 기본 키에 “fileName"을 입력하고, 문자열 타입으로 지정합니다. 다른 모든 값들을 그대로 둔 뒤 **생성**을 누릅니다.
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-8.12.37-pm.png)
 
-#### Create A Lambda Function
+### Create A Lambda Function
 
 1. 화면 상단의 **서비스** 버튼을 누르고 컴퓨팅 카테고리의 **Lambda**를 선택합니다. 
 2. **함수 생성**을 누르고, **새로 작성**을 선택합니다..
@@ -105,28 +104,28 @@ dynamoClient = boto3.resource('dynamodb')
 table = dynamoClient.Table('rekognition-thumbs')
 
 def lambda_handler(event, context):
-	s3_bucket_name = event['Records'][0]['s3']['bucket']['name']
-	s3_object_key = event['Records'][0]['s3']['object']['key']
-	
-	rekogResponseCeleb = rekogClient.recognize_celebrities(Image={
-		'S3Object': {
-			'Bucket': s3_bucket_name, 
-			'Name': s3_object_key}})
+    s3_bucket_name = event['Records'][0]['s3']['bucket']['name']
+    s3_object_key = event['Records'][0]['s3']['object']['key']
 
-	celebs = []
-	
-	print rekogResponseCeleb
-	
-	for celeb in rekogResponseCeleb['CelebrityFaces']:
-		celebs.append(celeb['Name'])
-	
-	if len(celebs)>0:
-		response = table.put_item(Item={
-			'fileName': s3_object_key,
-			'celebrities': celebs
-		})
+    rekogResponseCeleb = rekogClient.recognize_celebrities(Image={
+        'S3Object': {
+            'Bucket': s3_bucket_name, 
+            'Name': s3_object_key}})
 
-	return "Done"
+    celebs = []
+
+    print rekogResponseCeleb
+
+    for celeb in rekogResponseCeleb['CelebrityFaces']:
+        celebs.append(celeb['Name'])
+
+    if len(celebs)>0:
+        response = table.put_item(Item={
+            'fileName': s3_object_key,
+            'celebrities': celebs
+        })
+
+    return "Done"
 ```
 
 {% hint style="info" %}
@@ -148,7 +147,7 @@ def lambda_handler(event, context):
 
 * 페이지의 오른쪽 위의 **저장** 버튼을 누릅니다. 
 
-#### Create a MediaConvert Job to Extract Images
+### Create a MediaConvert Job to Extract Images
 
 1. 화면 위의 **서비스**를 클릭하고, 미디어 서비스 카테고리의 **MediaConvert**를 클릭합니다.
 2. **작업 생성** 또는 **시작하기**를 클릭합니다. 
@@ -166,11 +165,11 @@ s3://samisb-external/mediaimmersion/GrandTour_101_Clip_15s.mp4
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-8.35.46-pm.png)
 
-   3. 출력 섹션에서 "Output1"을 클릭하고  **이름 한정자**에 “$dt$”를 입력하고, **확장자**에 “jpg”를 입력합니다.
+1. 출력 섹션에서 "Output1"을 클릭하고  **이름 한정자**에 “$dt$”를 입력하고, **확장자**에 “jpg”를 입력합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-7.52.56-pm.png)
 
-  4. 출력 부분에서 “Output 1”을 클릭합니다.
+1. 출력 부분에서 “Output 1”을 클릭합니다.
 
 * **컨테이너** 부분에 “컨테이너 없음”를 고릅니다.
 * **비디오 코덱** 부분에는 “JPEG로 프레임 쳐”를 선택합니다.
@@ -188,20 +187,19 @@ s3://samisb-external/mediaimmersion/GrandTour_101_Clip_15s.mp4
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-7.47.09-pm.png)
 
-  **** 2. ****왼쪽 부분의 **출력 그룹**에서 **추가**를 클릭합니다. “File group”을 고르고 Select를 누릅니다.
+ **2.** 왼쪽 부분의 **출력 그룹**에서 **추가**를 클릭합니다. “File group”을 고르고 Select를 누릅니다.
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-8.34.27-pm%20%281%29.png)
 
-   3. 사용자 지정 그룹 이름에 “**MP4 for Rekognition**”을 입력하고 대상 입력 박스에서 '찾아보기' 를 클릭합니다. 이전에 생성한 S3 버킷을 찾아 Choose 버튼을 누르고 Location에 “mp4/”를 입력합니다.  
-
+1. 사용자 지정 그룹 이름에 “**MP4 for Rekognition**”을 입력하고 대상 입력 박스에서 '찾아보기' 를 클릭합니다. 이전에 생성한 S3 버킷을 찾아 Choose 버튼을 누르고 Location에 “mp4/”를 입력합니다.  
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-8.38.00-pm.png)
 
-   4.  출력 섹션의 이름 한정자에 “$dt$”를 입력하고, 확장자 란에 “mp4”를 입력합니다.
+1. 출력 섹션의 이름 한정자에 “$dt$”를 입력하고, 확장자 란에 “mp4”를 입력합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-7.57.25-pm.png)
 
-   5. 출력 아래의 “Output 1”을 클릭합니다. **비트레이트\(bits/s\)** 부분에 “6m”을 입력합니다. \(오디오1 제거는 하지 않습니다.\)
+1. 출력 아래의 “Output 1”을 클릭합니다. **비트레이트\(bits/s\)** 부분에 “6m”을 입력합니다. \(오디오1 제거는 하지 않습니다.\)
 
 ![](../.gitbook/assets/screen-shot-2021-03-16-at-7.50.43-pm.png)
 
@@ -268,14 +266,14 @@ def lambda_handler(event, context):
     status = message['Status']
     objectName = message['Video']['S3ObjectName']
     bucketName = message['Video']['S3Bucket']
-   
+
     response = client.get_label_detection(JobId=jobId)
 
     dynamoResponse = table.put_item(Item={
         'fileName': objectName,
         'objects': json.dumps(response['Labels'])
     })    
-        
+
     return 'Done'
 ```
 
@@ -323,23 +321,23 @@ client = boto3.client('rekognition')
 def lambda_handler(event, context):
     s3_bucket_name = event['Records'][0]['s3']['bucket']['name']
     s3_object_key = event['Records'][0]['s3']['object']['key']
-    
+
     response = client.start_label_detection(
         Video={
             'S3Object': {
                 'Bucket': s3_bucket_name,
                 'Name': s3_object_key
             }
-            
+
         },
         NotificationChannel={
             'SNSTopicArn': 'arn:aws:sns:us-east-1:1234567890:AmazonRekognitionVideo-Notification',
             'RoleArn': 'arn:aws:iam::1234567890:role/RekognitionRole'
-            
+
         },
         MinConfidence=85
         )
-   
+
     return 'Done'
 ```
 
@@ -354,7 +352,6 @@ NotificationChannel={
  'SNSTopicArn': 'arn:aws:sns:us-east-1:1234567890: AmazonRekognitionVideo-Notification',
  'RoleArn': 'arn:aws:iam::1234567890:role/RekognitionRole'
  }
-
 ```
 
 Lambda 콘솔의 맨 위에서 왼쪽 **트리거 추가** 를 클릭하고, 드롭 다운 메뉴에서 **S3**를 클릭합니다.
@@ -400,7 +397,6 @@ Lambda 콘솔의 맨 위에서 왼쪽 **트리거 추가** 를 클릭하고, 드
 https://s3.amazonaws.com/mediaimmersion/mediaanalysis/RekognitionVideo-Transcribe.py
 ```
 
-  
 코드를 다운로드하여 사용하시는 경우, **Rekognition 역할** 및 **SNS주제**에 대한 **ARN**을 변경하는 것을 잊지 마세요.
 
 ```python
@@ -412,40 +408,39 @@ client = boto3.client('rekognition')
 def lambda_handler(event, context):
     s3_bucket_name = event['Records'][0]['s3']['bucket']['name']
     s3_object_key = event['Records'][0]['s3']['object']['key']
-    
+
     response = client.start_label_detection(
         Video={
             'S3Object': {
                 'Bucket': s3_bucket_name,
                 'Name': s3_object_key
             }
-            
+
         },
         NotificationChannel={
             'SNSTopicArn': 'arn:aws:sns:us-east-2:1234567890:AmazonRekognitionVideo-Notification',
             'RoleArn': 'arn:aws:iam::1234567890:role/RekognitionRole'
-            
+
         },
         MinConfidence=85
         )
-   
+
     transcribe = boto3.client('transcribe')
 
     job_uri = "https://s3.us-east-2.amazonaws.com/" + s3_bucket_name + "/" + s3_object_key
-       
+
     transcribe.start_transcription_job(
         TranscriptionJobName="TranscribeJob",
         Media={'MediaFileUri': job_uri},
         MediaFormat='mp4',
         LanguageCode='en-US'
         )
-   
-    return 'Done'
 
+    return 'Done'
 ```
 
 {% hint style="info" %}
-**주의** 
+**주의**
 
 위의 코드에서 job\_uri 부분의 **us-east-2**를 이전 단계에서 S3 버킷을 생성한 지역으로 변경해 줍니다. 도쿄 리전을 사용하고 있으면 **ap-northeast-1**, 서울리전을 사용하고 있으면 **ap-northeast-2** 가 됩니다.
 {% endhint %}

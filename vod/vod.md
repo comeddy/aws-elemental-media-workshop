@@ -33,8 +33,7 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 ![](../.gitbook/assets/screen-shot-2021-03-23-at-12.58.35-pm.png)
 
 1. 다음으로, **권한** 탭을 누르고 **CORS 구성**을 클릭합니다. 그리고 아래의 XML 문서를 복사하여 CORS 구성 편집기에 붙여넣고 **저장** 버튼을 누릅니다. 이 설정을 통해 브라우저가 모든 Origin에서 해당 S3 내의 컨텐츠를 요청할 수 있습니다.
-
-* XML 형식과 JSON 형식중 선택 사용하세요. 
+2. XML 형식과 JSON 형식중 선택 사용하세요.
 
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
@@ -75,7 +74,6 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 2. 왼쪽 탐색 바에서 **역할**을 선택하고, **역할 만들기**를 선택합니다.
 3. **AWS 서비스**를 선택하고, 이 역할을 사용할 서비스로 **MediaConvert** 를 선택한 후, **다음:권한** 버튼을 클릭합니다.
 
-  
 _참고: 역할을 사용할 서비스를 선택하게 되면 AWS 서비스가 사용자 대신 특정한 역할을 맡을 수 있도록 역할에 대한 신뢰 정책이 자동으로 만들어집니다. 만약 CLI 또는 AWS CloudFormation를 이용하여 이 역할을 생성하고 있으신 경우, 직접 신뢰 정책을 구성해 주어야 합니다._
 
 ![](../.gitbook/assets/image%20%2878%29.png)
@@ -84,7 +82,7 @@ _참고: 역할을 사용할 서비스를 선택하게 되면 AWS 서비스가 �
 
 1. **다음:태그**를 누릅니다.
 2. **다음:검토**를 누릅니다.
-3. 역할 이름에 __vod-MediaConvertRole 을 입력합니다.
+3. 역할 이름에 \_\_vod-MediaConvertRole 을 입력합니다.
 4. **역할 만들기**를 누릅니다.
 5. 역할 페이지의 필터 박스에 vod-MediaConvertRole 을 입력하고, 방금 생성한 역할을 클릭합니다.
 6. 해당 역할의 요약 페이지 위쪽에 나와 있는 **ARN을 적어 둡니다**. 이후 모듈에서 이 ARN을 사용하게 됩니다.
@@ -167,8 +165,6 @@ _참고: 이름 한정자와 세그먼트 한정자를 설정하는 이유는, �
 
 ![](../.gitbook/assets/screen-shot-2021-03-17-at-11.10.13-pm.png)
 
-
-
 1. 페이지의 맨 아래로 스크롤을 내리고 **생성**을 클릭합니다.
 2. 작업이 완료되기를 기다립니다. 최근 작업 페이지에서 새로 고침 버튼을 눌러 현재 작업의 진행 상태를 확인할 수 있습니다.
 
@@ -186,8 +182,7 @@ _참고: 이름 한정자와 세그먼트 한정자를 설정하는 이유는, �
 ![](../.gitbook/assets/screen-shot-2021-03-23-at-1.21.03-pm.png)
 
 1. 링크를 클릭하여 Safari 브라우저에서 스트림을 재생하거나JW Player 스트림 테스터를 이용하여 재생합니다.
-
-* [https://www.jwplayer.com/developers/stream-tester/](https://www.jwplayer.com/developers/stream-tester/)
+2. [https://www.jwplayer.com/developers/stream-tester/](https://www.jwplayer.com/developers/stream-tester/)
 
 ![JW Player URL](../.gitbook/assets/image%20%28110%29.png)
 
@@ -209,7 +204,7 @@ _참고: 이름 한정자와 세그먼트 한정자를 설정하는 이유는, �
 
 **추가 과제: AWS Lambda를 이용하여 프로그래머틱하게 MediaConvert 작업을 생성하기**
 
- 방금까지 콘솔을 이용하여 MediaConvert 작업을 만드는 방법을 배웠습니다. 이번에는 AWS Lambda를 사용하여 서버리스 형태로 MediaConvert 작업을 자동화하여 제출하는 예를 살펴보겠습니다.
+방금까지 콘솔을 이용하여 MediaConvert 작업을 만드는 방법을 배웠습니다. 이번에는 AWS Lambda를 사용하여 서버리스 형태로 MediaConvert 작업을 자동화하여 제출하는 예를 살펴보겠습니다.
 
 ![](../.gitbook/assets/17.png)
 
@@ -356,6 +351,4 @@ Apple HLS Landing Page
 ```text
 https://developer.apple.com/streaming/
 ```
-
-
 

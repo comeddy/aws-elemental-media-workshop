@@ -8,9 +8,9 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 ![ &#xBBF8;&#xB514;&#xC5B4;&#xC11C;&#xBE44;&#xC2A4;&#xAC00; CloudFront &#xB97C; &#xD1B5;&#xD55C; &#xB77C;&#xC774;&#xBE0C; &#xC601;&#xC0C1; &#xC2A4;&#xD2B8;&#xB9AC;&#xBC0D; &#xACFC;&#xC815; ](../.gitbook/assets/picture1.png)
 
- **AWS Elemental MediaLive**는 브로드캐스트 및 스트리밍 전송을 위한 라이브 출력을 생성할 수 있는 실시간 비디오 서비스로, 실시간 비디오 콘텐츠의 형식 및 패키지를 다른 형식 및 패키지로 변환할 수 있습니다.
+**AWS Elemental MediaLive**는 브로드캐스트 및 스트리밍 전송을 위한 라이브 출력을 생성할 수 있는 실시간 비디오 서비스로, 실시간 비디오 콘텐츠의 형식 및 패키지를 다른 형식 및 패키지로 변환할 수 있습니다.
 
- **AWS Elemental MediaPackage**는 AWS 클라우드에서 실행되는 JIT\(Just-In-Time\) 비디오 패키징 및 제작 서비스로, MediaPackage를 사용하면 매우 안전하고 확장 가능하며 신뢰할 수 있는 비디오 스트림을 다양한 재생 디바이스 및 CDN\(콘텐츠 전송 네트워크\)에 전달할 수 있습니다.
+**AWS Elemental MediaPackage**는 AWS 클라우드에서 실행되는 JIT\(Just-In-Time\) 비디오 패키징 및 제작 서비스로, MediaPackage를 사용하면 매우 안전하고 확장 가능하며 신뢰할 수 있는 비디오 스트림을 다양한 재생 디바이스 및 CDN\(콘텐츠 전송 네트워크\)에 전달할 수 있습니다.
 
 **Amazon CloudFront**는 MediaPackage 사용자 지정 엔드포인트를 오리진으로 사용하도록 구성되어 있으며 요청 인증을 위해 CDN 식별자 사용자 지정 HTTP 헤더를 포함합니다. CloudFront 배포판은 짧은 지연 시간과 빠른 전송 속도로 시청자에게 라이브 스트림을 전달합니다.
 
@@ -44,7 +44,7 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 * MediaPackage 채널의 생성이 완료 되었습니다. MediaLive 채널을 생성하는 다음 섹션으로 이동합니다.
 
-###  2. AWS MediaLive Channel 생성 
+### 2. AWS MediaLive Channel 생성
 
 ![&#xBBF8;&#xB514;&#xC5B4; &#xBE44;&#xB514;&#xC624; &#xD504;&#xB85C;&#xC138;&#xC2F1;](../.gitbook/assets/ml.png)
 
@@ -149,15 +149,13 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-7.14.47-pm%20%281%29.png)
 
-   2. PlayBack preview 에서 미리 보기확인과 QR code로 미리보기 할 수 있습니다.
+1. PlayBack preview 에서 미리 보기확인과 QR code로 미리보기 할 수 있습니다.
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-7.16.57-pm.png)
 
+1. [VLC player를 다운로드](https://www.videolan.org/vlc/) 설치 후 네트워크주소에 CloudFront URL을 입력합니다.
 
-
-    3. [VLC player를 다운로드](https://www.videolan.org/vlc/) 설치 후 네트워크주소에 CloudFront URL을 입력합니다.
-
-![&#xBA40;&#xD2F0;&#xD50C; OTT Device   ](../.gitbook/assets/device.png)
+![&#xBA40;&#xD2F0;&#xD50C; OTT Device ](../.gitbook/assets/device.png)
 
 ![](../.gitbook/assets/image%20%28112%29.png)
 
@@ -167,13 +165,11 @@ description: 이 솔루션은 다음과 같은 기능을 제공합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-9.14.14-pm.png)
 
-   4. CloudFront 를 통해 배포되는 라이브 영상 확인이 완료되었습니다.
+1. CloudFront 를 통해 배포되는 라이브 영상 확인이 완료되었습니다.
 
 ![](../.gitbook/assets/screen-shot-2021-05-16-at-7.21.45-pm.png)
 
 ### **완료**
 
 축하합니다! AWS Elemental MediaLive Service를 이용한 HoL을 완료하셨습니다.
-
-
 
