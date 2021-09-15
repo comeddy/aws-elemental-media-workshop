@@ -7,7 +7,7 @@ description: 'Last Updated : 2021-5-20'
 이번 모듈의 첫번째 파트에서는 VMAP을 이용하여 VOD에 광고를 넣는 MediaTailor 설정을 생성합니다. 이 실습에서 사용되는 VMAP XML은 Preroll \(방영전\), Midroll \(방영중\), 그리고 Postroll \(방영후\) 광고를 제공합니다. 이 모듈의 두번째 파트에서는 VAST를 이용하여 VOD 콘텐트 \(SCTE-35 가 있는 Manifest\)에 실시간으로 광고를 넣는 실습을 진행합니다.
 
 {% hint style="warning" %}
-현재 MediaTailor가 서울 리전에 없기 때문에 다른 리전 \(예, 도쿄 리전\) 을 선택하여 실습을 진행합니다.
+현재 MediaTailor가 서울 리전에 없기 때문에 다른 리전 \(**예, 도쿄 리전**\) 을 선택하여 실습을 진행합니다.
 {% endhint %}
 
 ![](../.gitbook/assets/0%20%281%29.png)
