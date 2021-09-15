@@ -140,7 +140,7 @@ def lambda_handler(event, context):
    4. **접미사** 란에 **.jpg**를 입력합니다.
    5. **추가** 버튼을 누릅니다.
 
-![](../.gitbook/assets/screen-shot-2021-03-16-at-8.19.58-pm%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2021-03-16-at-8.19.58-pm%20%282%29.png)
 
 1. Lambda **구성**을 클릭합니다. 왼쪽 메뉴 중 **일반 설정** 란이 나옵니다. 편집을 눌러 나온 메뉴에서 **제한 시간**을 **30초**로 설정합니다. **저장**을 누릅니다.
 
@@ -160,7 +160,7 @@ s3://samisb-external/mediaimmersion/GrandTour_101_Clip_15s.mp4
 
 1. 작업 패널의 **출력 그룹**에서 추가를 클릭하고, **파일 그룹**을 고릅니다. 이후 **Select**을 누릅니다.
 
-![](../.gitbook/assets/screen-shot-2021-03-16-at-8.34.27-pm.png)
+![](../.gitbook/assets/screen-shot-2021-03-16-at-8.34.27-pm%20%281%29.png)
 
 1. 사용자 지정 그룹 이름에 “**Thumbnails for Rekognition**”를 입력하고, 대상 입력 박스에서 **찾아보기**를 클릭합니다. 이전에 생성한 S3 버킷을 찾아 Choose 버튼을 누르고 Location에 “thumbs/”를 입력합니다.
 
@@ -190,7 +190,7 @@ s3://samisb-external/mediaimmersion/GrandTour_101_Clip_15s.mp4
 
   **** 2. ****왼쪽 부분의 **출력 그룹**에서 **추가**를 클릭합니다. “File group”을 고르고 Select를 누릅니다.
 
-![](../.gitbook/assets/screen-shot-2021-03-16-at-8.34.27-pm%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2021-03-16-at-8.34.27-pm%20%281%29%20%281%29.png)
 
    3. 사용자 지정 그룹 이름에 “**MP4 for Rekognition**”을 입력하고 대상 입력 박스에서 '찾아보기' 를 클릭합니다. 이전에 생성한 S3 버킷을 찾아 Choose 버튼을 누르고 Location에 “mp4/”를 입력합니다.  
 

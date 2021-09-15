@@ -153,7 +153,7 @@ description: 'Last Updated : 2021-9-12'
 
 1. 스트리밍이 시작되면 MediaPackage의 Endpoints에서 Play를 눌러 영상을 확인할 수 있습니다.
 
-![](../.gitbook/assets/screen-shot-2021-05-16-at-7.14.47-pm%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2021-05-16-at-7.14.47-pm%20%281%29%20%281%29.png)
 
    2. PlayBack preview 에서 미리 보기확인과 QR code로 미리보기 할 수 있습니다.
 
@@ -224,9 +224,13 @@ Amplify 는 정적 웹 호스팅시 GitHub, BitBucket, GitLab 및 AWS CodeCommit
 
 3. App Name과 Environment name에 적당한 이름으로 작성합니다.
 
-* **Drag and drop** 을 클릭하고 zip파일을 업로드 한 후,  **Save and deploy**를 합니다.
+* **방법1\) Drag and drop** 을 클릭하고 zip파일을 업로드 한 후,  **Save and deploy**를 합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-09-12-at-8.33.25-pm.png)
+
+* **선택2\)** S3에 zip파일을 업로드 한 후, **Save and deplo**y를 하는방법도 가능합니다.
+
+![](../.gitbook/assets/screen-shot-2021-09-15-at-5.15.45-pm.png)
 
 
 
