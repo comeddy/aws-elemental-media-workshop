@@ -87,13 +87,13 @@ description: 'Last Updated : 2021-9-12'
 * **Channel and input details**을 클릭하여 나머지 MediaLive channel 설정을 수행합니다.
 * **Channel name**에 ‘builders-live’을 입력합니다. 
 
-![](../.gitbook/assets/screen-shot-2021-05-16-at-7.02.58-pm.png)
+![](../.gitbook/assets/screen-shot-2021-09-15-at-3.46.54-pm.png)
 
 {% hint style="success" %}
 **알고계신가요?** 입력대상 주소를 A와B 이중화가 아닌 단일 파이프라인으로 설정하고 싶을 경우, Channel class를 SINGLE\_PIPELINE으로 선택합니다.
 {% endhint %}
 
-* 아래 IAM role 란에는 앞서 만든 MediaLiveAccessRole이 보일 겁니다. Channel template 드롭다운 박스에서 ‘HTTP live streaming\(MediaPackage\)’을 선택합니다. 팝업 창이 나오면 Confirm을 눌러 넘어갑니다.
+* 앞서 MediaLiveAccessRole을 만든경우에는 **기존 역할 사용**이 보일 겁니다. Channel template 드롭다운 박스에서 ‘**HTTP live streaming\(MediaPackage\)**’을 선택합니다. 팝업 창이 나오면 Confirm을 눌러 넘어갑니다.
 
 ![](../.gitbook/assets/image%20%2819%29.png)
 
@@ -230,7 +230,7 @@ Amplify 는 정적 웹 호스팅시 GitHub, BitBucket, GitLab 및 AWS CodeCommit
 
 
 
-4. Amplify를 통해 배포된 도메인을 통해 라이브 영상을 최종합니다.
+4. Amplify를 통해 배포된 도메인을 통해 라이브 영상을 최종 확합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-09-12-at-8.36.07-pm.png)
 
