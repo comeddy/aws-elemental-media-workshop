@@ -224,8 +224,6 @@ Amplify 는 정적 웹 호스팅시 GitHub, BitBucket, GitLab 및 AWS CodeCommit
 
 3. App Name과 Environment name에 적당한 이름으로 작성합니다.
 
-![](../.gitbook/assets/screen-shot-2021-09-16-at-5.15.50-pm.png)
-
 * **선택1\) Drag and drop** 을 클릭하고 zip파일을 업로드 한 후,  **Save and deploy**를 합니다.
 
 ![](../.gitbook/assets/screen-shot-2021-09-12-at-8.33.25-pm.png)
