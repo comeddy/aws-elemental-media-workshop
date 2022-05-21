@@ -2,7 +2,7 @@
 description: 'Last Updated : 2021-9-12'
 ---
 
-# AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront로 배포하기
+# WS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront 배포와 Amplify 이용한 PIP플레이어로 쉽게 구현하기
 
 이 실습에서는 **AWS Elemental MediaLive**와 **MediaPackage**를 사용하여 라이브 스트리밍 채널을 **Amazon CloudFront** 통한 배포생성하는 것을 진행합니다. 그리고, 추가적으로 OBS를 이용하여 통해 라이브 채널을 최종 단계서 VLC 플레이어로 확인해봅니다.
 
@@ -118,7 +118,7 @@ description: 'Last Updated : 2021-9-12'
 
 ![영상채널 소스](../.gitbook/assets/camera.png)
 
-* [https://obsproject.com](https://obsproject.com) 에서 OBS Studio를 다운로드한 후 실행합니다.
+* [https://obsproject.com](https://obsproject.com/) 에서 OBS Studio를 다운로드한 후 실행합니다.
 
 ![](<../.gitbook/assets/image (106).png>)
 
