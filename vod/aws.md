@@ -1,5 +1,5 @@
 ---
-description: 'Last Updated : 2021-9-12'
+description: 'Last Updated : 2022-05-12'
 ---
 
 # WS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront 배포와 Amplify 이용한 PIP플레이어로 쉽게 구현하기
