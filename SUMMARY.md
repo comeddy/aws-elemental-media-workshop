@@ -6,7 +6,7 @@
 
 * [Video-On-Demand Streaming with AWS Elemental Media Services](vod/vod.md)
 * [Live Streaming with AWS Elemental MediaServices](vod/live-streaming-with-aws-elemental-mediaservices.md)
-* [WS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront 배포와 Amplify 이용한 PIP플레이어로 쉽게 구현하기](vod/aws.md)
+* [AWS 미디어서비스를 통한 라이브 워크플로 구성 및 CloudFront 배포와 Amplify 이용한 PIP플레이어로 쉽게 구현하기](vod/aws.md)
 * [Monetization with AWS Elemental MediaServices](vod/monetization-with-aws-elemental-mediaservices.md)
 * [AWS 머신 러닝 및 미디어 서비스들을 이용하여 비디오 메타데이터 추출하기](vod/media-analysis.md)
 
